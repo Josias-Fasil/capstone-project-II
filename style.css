@@ -1,0 +1,239 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #071B2B;
+    height:100vh;
+}
+.title {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 20px;
+    font-family: "Libre Baskerville", serif;
+}
+.subtitle {
+    color: white;
+    font-size: 2rem;
+    padding-top: 20px;
+    font-family: "Libre Baskerville", serif;
+    text-align: center;
+     font-family: 'Montserrat', sans-serif;
+}
+.image {
+    display: flex;
+    align-items: flex-end;
+    width:100%;
+    height: 100vh;
+    
+}
+.about {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background-color: #167D8D;
+    min-height: 100vh;
+    width: 100%;
+}
+.profile {
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-text {
+    margin-top: 20px;
+}
+.hello {
+    font-size: 2rem;
+    text-align: center;
+}
+.dots {
+  width: 90px;
+  margin: 80px 0;
+  border-top: 4px dotted #cfeaea;
+}
+.skill {
+    display:flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom:40px;
+}
+.skill-img {
+    display: flex;
+    justify-content: center;
+    flex:0 0 250px;
+    width:200px;
+    height:200px;
+}
+.contact {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom:40px;
+}
+.contact-btn {
+    background-color: #FFC857;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #FFC857, #F07800);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-btn:hover {
+  background-color:  #F07800;;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.skill-text {
+    color:black;
+}
+
+h2 {
+    color:#FFFFFF;
+}
+h3 {
+    color:#E1F1F2;
+    font-size: 1.5rem;
+}
+.connect {
+    color:black;
+    font-size: 1.05rem;
+    
+}
+.helloo {
+    color:#FFFFFF;
+    font-size: 2rem;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #B9E4E8;
+    gap: 30px;                /* space between the links and the copyright */
+    padding: 50px 20px;
+}
+.footer-links {
+  display: flex;
+  gap: 40px;                /* space between LinkedIn, Twitter, Website */
+}
+
+.footer-links a {
+  color: #0f6b70;           /* darker teal, readable on the light background */
+  font-size: 1.1rem;
+  text-decoration: none;    /* removes the default underline */
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  margin: 0;                /* removes the default paragraph margin */
+  color: black;
+  font-size: 0.9rem;
+  gap: 20px;
+}
+/* ===== Tablets (768px and below) ===== */
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+    .subtitle {
+        font-size: 1.6rem;
+    }
+
+    /* side padding so text never touches the screen edges */
+    .about {
+        padding: 20px 20px 0;
+    }
+    .about-text,
+    .contact {
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .skill {
+        max-width: 600px;
+    }
+    .skill-img {
+        flex: 0 0 150px;       /* narrower image column */
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ===== Phones (640px and below) ===== */
+@media (max-width: 640px) {
+    /* stack each skill: image on top, text below */
+    .skill {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+        margin-bottom: 50px;
+    }
+    .skill-img {
+        flex: none;            /* in a column, flex-basis would control height, so cancel it */
+        width: 140px;
+        height: 140px;
+    }
+
+    .hello,
+    .helloo {
+        font-size: 1.7rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    .dots {
+        margin: 50px 0;
+    }
+}
+
+/* ===== Small phones (480px and below) ===== */
+@media (max-width: 480px) {
+    .main {
+        padding: 0 16px;
+    }
+    .text-4xl {
+        font-size: 2.3rem;     /* 4rem is too wide for a phone */
+    }
+    .text-2xl {
+        font-size: 1.3rem;
+    }
+
+    .profile {
+        width: 150px;
+        height: 150px;
+    }
+
+    .connect {
+        font-size: 1rem;
+    }
+    .contact-btn {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;    /* wide, easy-to-tap button */
+    }
+
+    /* footer links wrap instead of overflowing */
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 28px;
+    }
+}
